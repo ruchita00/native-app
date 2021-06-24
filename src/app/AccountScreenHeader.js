@@ -37,18 +37,23 @@ const AccountScreenHeader = () => {
           onValueChange={newValue => setToggeleCheckBox(newValue)}
         />
 
-        <HyperLink 
-        linkDefault={true}
-        linkStyle={{color:'#828282',fontSize:14, textDecorationLine: 'underline'}}
-        linkText={(url)=>url === 'https://www.ehealthinsurance.com/about-ehealth/terms-of-use/' ? 'Terms and Conditions' : url}
-        // linkText1={(url1)=>url1 === 'https://www.ehealthinsurance.com/about-ehealth/privacy-policy/' ? 'Privacy Policy' : url}
+        <HyperLink
+          linkDefault={true}
+          linkStyle={{ color: '#828282', fontSize: 14, textDecorationLine: 'underline' }}
+          linkText={(url) => {
+            if (url === 'https://www.ehealthinsurance.com/about-ehealth/terms-of-use/')
+              return 'Terms and Conditions';
+            if (url === 'https://www.ehealthinsurance.com/about-ehealth/privacy-policy/')
+              return 'Privacy Policy';
+
+            return url;
+          }}
         >
-        <Text style={styles.text}>
-          I agree to the eHealth https://www.ehealthinsurance.com/about-ehealth/terms-of-use/ and Privacy Policy 
-          and authorize eHealth to share my enrollment and plan information with
-          Mpowered Health.
-        </Text>
-    
+          <Text style={styles.text}>
+            I agree to the eHealth https://www.ehealthinsurance.com/about-ehealth/terms-of-use/ and
+            https://www.ehealthinsurance.com/about-ehealth/privacy-policy/ and authorize eHealth to
+            share my enrollment and plan information with Mpowered Health.
+          </Text>
         </HyperLink>
       
         
