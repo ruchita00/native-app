@@ -15,6 +15,7 @@ import ServicesScreenHeader from './src/app/ServicesScreenHeader'
 import HomeScreenHeader from './src/app/HomeScreenHeader';
 import AccountScreenHeader from './src/app/AccountScreenHeader'
 import CircleScreenHeader from './src/app/CirclesScreenHeader'
+import SearchFilter from './src/app/SearchFilter';
 function CustomHeader({title, isHome, navigation}) {
   return (
     <View style={{flexDirection: 'row', height: 50}}>
@@ -143,7 +144,7 @@ function CirclesScreenDetail({navigation}) {
     <SafeAreaView style={{flex: 1}}>
       <CustomHeader title="Circles Detail" navigation={navigation} />
       <View style={{flex: 1, justifyContent: 'center', alignContent: 'center'}}>
-        <CircleScreenHeader />
+        <SearchFilter />
       </View>
     </SafeAreaView>
   );

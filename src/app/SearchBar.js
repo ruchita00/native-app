@@ -12,8 +12,8 @@ const SearchBar=(props)=> {
             padding:5,
             alignItems:'center',
             flexDirection:'row',
-            margin:15,borderRadius:10
-            ,marginTop:40,
+            margin:15,borderRadius:10,
+            marginTop:10,
             backgroundColor:'#F5F5F5'
             }}>
                 <Image source={require('../images/search.png')} />
